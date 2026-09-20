@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640">
+<rect width="1280" height="640" fill="#101f25"/>
+<path d="M0 520H1280M0 160H1280M840 0V640" stroke="#20343b"/>
+<g font-family="Segoe UI,Arial,sans-serif">
+<text x="70" y="104" font-size="17" letter-spacing="3" fill="#7bddb5">EASON SITU / PERSONAL PROJECT</text>
+<text x="64" y="260" font-size="94" font-weight="650" fill="#f2f5f2">LoL Connect</text>
+<text x="70" y="325" font-size="29" fill="#c8d5d4">Diagnose connection failures.</text>
+<text x="70" y="370" font-size="29" fill="#c8d5d4">Test your routes.</text>
+<text x="70" y="580" font-size="18" fill="#9aafaf">WINDOWS DESKTOP  /  NETWORK DIAGNOSTICS  /  MIT</text>
+<path d="M934 212V425" stroke="#3e7363" stroke-width="3"/>
+<g fill="#172e33" stroke="#3e7363"><rect x="882" y="194" width="310" height="64" rx="8"/><rect x="882" y="292" width="310" height="64" rx="8"/><rect x="882" y="390" width="310" height="64" rx="8"/></g>
+<g fill="#7bddb5"><circle cx="910" cy="226" r="5"/><circle cx="910" cy="324" r="5"/><circle cx="910" cy="422" r="5"/></g>
+<g fill="#edf4f1" font-size="22"><text x="937" y="234">Observe</text><text x="937" y="332">Diagnose</text><text x="937" y="430">Choose a route</text></g>
+</g></svg>

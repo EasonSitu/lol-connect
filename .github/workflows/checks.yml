@@ -1,0 +1,25 @@
+name: Checks
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Install local TLS fixture dependency
+        run: python -m pip install cryptography
+      - name: Session and route checks
+        shell: pwsh
+        run: |
+          ./test-lol-session.ps1
+          ./test-lol-routes.ps1
+          ./test-lol-lab.ps1
+      - name: Probe checks
+        run: python -m unittest discover -p test_lol_probe.py
+      - name: Build launcher
+        shell: pwsh
+        run: ./Build-Launcher.ps1
