@@ -2,7 +2,7 @@
 <rect width="1280" height="640" fill="#101f25"/>
 <path d="M0 520H1280M0 160H1280M840 0V640" stroke="#20343b"/>
 <g font-family="Segoe UI,Arial,sans-serif">
-<text x="70" y="104" font-size="17" letter-spacing="3" fill="#7bddb5">EASON SITU / PERSONAL PROJECT</text>
+<text x="70" y="104" font-size="17" letter-spacing="3" fill="#7bddb5">LOL CONNECT / DOCUMENTATION</text>
 <text x="64" y="260" font-size="94" font-weight="650" fill="#f2f5f2">LoL Connect</text>
 <text x="70" y="325" font-size="29" fill="#c8d5d4">Diagnose connection failures.</text>
 <text x="70" y="370" font-size="29" fill="#c8d5d4">Test your routes.</text>

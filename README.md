@@ -4,17 +4,15 @@
 
 **面向国服 LOL 的 Windows 连接诊断与分流工具。记录启动过程中的连接异常，测试游戏服务，并通过图形界面配置自己的线路。**
 
-[下载 Windows 版](https://github.com/EasonSitu/lol-connect/releases/latest) · [使用指南](docs/USAGE.zh-CN.md) · [English](README.en.md) · [实现说明](docs/ARCHITECTURE.md)
+[下载 Windows 版](https://github.com/EasonSitu/lol-connect/releases/latest) · [图文使用手册](docs/MANUAL.zh-CN.md) · [快速指南](docs/USAGE.zh-CN.md) · [English](README.en.md) · [实现说明](docs/ARCHITECTURE.md)
 
 Windows 10/11 · PowerShell 7.2+ · MIT
 
-## 为什么做这个
+## 项目概览
 
-我在香港玩国服 LOL 时遇到过一个问题：WeGame 显示延迟正常，游戏却进不了大厅，或者一直停在加载画面。换一条线路有时能解决，但单看延迟，很难知道究竟是哪一段连接出了问题。
+LoL Connect 用于排查延迟显示正常、但客户端无法进入大厅或完成加载的连接问题。工具将启动日志、连接观察和用户阶段标记整理成诊断报告，并提供可选的接口测试与分流管理。
 
-LoL Connect 从这次排查中做出来。它记录游戏启动时的连接和日志，把用户标记的卡住位置与观察到的异常放在一起；需要换线路时，再测试自己的节点，为不同服务选择路径。
-
-它不提供节点或加速专线。无需代理节点，也可以先完成一次诊断。
+用户可以按需使用：仅诊断当前连接，或进一步测试自己的节点并配置服务路径。基础诊断不需要代理节点；本项目不提供节点、订阅或加速专线。
 
 ## 实际界面
 
@@ -57,7 +55,7 @@ LoL Connect 从这次排查中做出来。它记录游戏启动时的连接和�
 
 基础诊断不需要 Clash 或 Python。主动接口探测需要 Python 3.9+ 和系统 curl；节点测试与分流需要已有的 Clash Verge/Mihomo。EXE 是轻量启动入口，需要与脚本放在同一文件夹中。
 
-## 设计取舍
+## 使用原则
 
 **先诊断，再考虑线路。** 没有节点的用户也能看结果，不必先理解 IP、协议和代理规则。
 
@@ -73,10 +71,13 @@ LoL Connect 从这次排查中做出来。它记录游戏启动时的连接和�
 
 仓库包含日志增量读取、诊断结论、路由匹配、节点管理及探测器测试，以及不启用 TUN 的独立核心测试。运行方法与验证边界见 [实现说明](docs/ARCHITECTURE.md)。
 
-目前是从个人使用场景整理出的 Windows 工具，并未覆盖所有国服区服、客户端版本或网络环境。受日志格式、权限和进程可见性影响，部分目标可能无法识别；UDP 与真实游戏流程仍需实际验收。
+当前版本支持 Windows，尚未覆盖所有国服区服、客户端版本或网络环境。受日志格式、权限和进程可见性影响，部分目标可能无法识别；UDP 与真实游戏流程仍需实际验收。
 
-## 关于项目
+## 文档与许可
 
-由 [Eason Situ](https://github.com/EasonSitu) 发起并维护，使用 AI 辅助开发，从实际问题排查逐步形成诊断流程和桌面工具。项目重点是把网络排查证据、用户操作与可回退的配置过程连起来。
+- [图文使用手册](docs/MANUAL.zh-CN.md)：按页面说明诊断、测试、节点管理、分流与恢复。
+- [截图索引](docs/ASSETS.md)：页面截图、图注及适用场景。
+- [离线手册下载](https://github.com/EasonSitu/lol-connect/releases/download/v0.1.0/LoL-Connect-Manual.zip)：解压后打开“使用手册.html”，支持目录跳转和图片放大。
+- [实现说明](docs/ARCHITECTURE.md)：组件、测试方法与已知限制。
 
-采用 [MIT License](LICENSE)。本项目为独立个人项目，与 Riot Games、腾讯、WeGame 及 Clash/Mihomo 无隶属或背书关系；相关名称用于说明兼容场景。
+采用 [MIT License](LICENSE)，可按许可使用、修改和分发。本项目与 Riot Games、腾讯、WeGame 及 Clash/Mihomo 无隶属或背书关系；相关名称用于说明兼容场景。
